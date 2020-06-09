@@ -23,7 +23,7 @@
     }
    };
 
-**2) 75. Sort Colors ( leetcode ) **
+**2) 75. Sort Colors ( leetcode )**
 
     class Solution {
     public:
