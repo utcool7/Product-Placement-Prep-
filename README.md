@@ -69,3 +69,30 @@
         
     }
     };
+    
+**4) Kadanes Algo( largest sum contiguous subarray )**
+
+
+     int kadane(int arr[], int n)
+     {
+      
+       int max_so_far = INT_MIN ;
+       int max_end_here = 0;
+       for(int i = 0 ;i < n; i++)
+       {
+          max_end_here+=arr[i];
+        
+        if(max_end_here < arr[i])
+        {
+            max_end_here = arr[i];
+            
+        }
+        if(max_so_far < max_end_here)
+        {
+            max_so_far = max_end_here ;
+        }
+        
+      }
+    
+      return max_so_far;
+    } 
