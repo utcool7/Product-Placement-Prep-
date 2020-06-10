@@ -164,9 +164,9 @@
 4. Reverse the sub-array nums[k + 1:].
 
 
-    class Solution {
-    public:
-     void nextPermutation(vector<int>& nums) {
+       class Solution {
+       public:
+       void nextPermutation(vector<int>& nums) {
         int n = nums.size(), k, l;
     	for (k = n - 2; k >= 0; k--)
         {
@@ -191,7 +191,7 @@
     	    swap(nums[k], nums[l]);
     	    reverse(nums.begin() + k + 1, nums.end());
         }
-    }
-    };
+       }
+       };
 
     
