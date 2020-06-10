@@ -123,7 +123,7 @@
 
 # DAY 2( 10 June 2020 )  
 
-**5) 118. Pascal's Triangle(leetcode)**
+**1) 118. Pascal's Triangle(leetcode)**
 
 
     class Solution {
@@ -194,4 +194,27 @@
        }
        };
 
+**3) 48. Rotate Image( leetcode )**
+
+    class Solution {
+    public:
+    void rotate(vector<vector<int>>& matrix) {
+        int m = matrix.size(),n = matrix[0].size();
+        for(int i=0;i<m;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                if(i!=j)
+                  swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n/2;j++)
+                swap(matrix[i][j],matrix[i][n-j-1]);
+        }
+       
+        
+    }
+    };
     
