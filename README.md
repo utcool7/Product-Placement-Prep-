@@ -378,3 +378,29 @@
         return res;
     }
     };
+
+**3) 128. Longest Consecutive Sequence( leetcode )**
+
+     class Solution {
+     public:
+     int longestConsecutive(vector<int>& nums) {
+        set <int> s;
+        int largestSeq = 0 ;
+        for(auto x : nums)
+            s.insert(x);
+        
+        for(auto x : s)
+        {
+            if(!s.count(x - 1))
+            {
+                int temp = x ;
+                
+                while( s.count(temp) )
+                    temp++;
+                
+                largestSeq = max( largestSeq , temp - x );
+            }
+        }
+        return largestSeq;
+    }
+    };
