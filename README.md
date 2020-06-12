@@ -328,7 +328,7 @@
    
 # DAY 4( 12 June 2020 ) 
 
-**1) 50. Pow(x, n) ( leetcode )
+**1) 50. Pow(x, n) ( leetcode )**
 
     class Solution {
     public:
@@ -352,5 +352,29 @@
         else 
             return temp * temp * x;  
             
+    }
+    };
+    
+**2) 1. Two Sum ( leetcode )**
+
+    class Solution {
+    public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        
+        vector <int> res(2);
+        map <int , int > mp;
+        for(int i = 0 ; i < nums.size() ; i++)
+            mp[nums[i]] = i;
+        
+        for(int i = 0 ; i < nums.size() ; i++)
+        {
+            int numberToFind = target - nums[i] ;
+            if(mp[numberToFind] && mp[numberToFind] != i)
+            {
+                res[0] = i;
+                res[1] = mp[numberToFind];
+            }
+        }
+        return res;
     }
     };
