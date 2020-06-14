@@ -404,3 +404,24 @@
         return largestSeq;
     }
     };
+    
+# DAY 5( 14 June 2020 ) 
+
+**1) 206. Reverse Linked List( leetcode )**
+
+     class Solution {
+     public:
+     ListNode* reverseList(ListNode* head) {
+       
+        if(head == NULL || head ->next == NULL)
+            return head;
+        
+        ListNode* traverse = reverseList(head->next);
+        head->next->next = head;
+        head->next = NULL;
+        
+        return traverse;
+    }
+    };
+    
+    
